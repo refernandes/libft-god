@@ -153,5 +153,15 @@ int	main(int argc, const char *argv[])
 		else
 			print_ko("repeatable result");
 	}
+	if (str)  free(str);
+    if (str2) free(str2);
+    if (str3) free(str3);
+    if (str4) free(str4);
+    if (str5) free(str5);
+    if (elem)  free(elem);
+    if (elem2) free(elem2);
+    if (elem3) free(elem3);
+    if (elem4) free(elem4);
+    if (elem5) free(elem5);
 	return (0);
 }

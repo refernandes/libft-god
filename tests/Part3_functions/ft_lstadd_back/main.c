@@ -179,5 +179,15 @@ int	main(int argc, const char *argv[])
 		else
 			print_ko("old tail now points to new");
 	}
+	free(str);
+	free(str2);
+	free(str3);
+	free(str4);
+	free(str5);
+	free(elem);
+	free(elem2);
+	free(elem3);
+	free(elem4);
+	free(elem5);
 	return (0);
 }
