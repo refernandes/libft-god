@@ -1,0 +1,8 @@
+test01.output: 0000000000
+test02.output: 6565656565
+test03.output: 0065656565
+test04.output: 0000656565
+test05.output: 0000006565
+test06.output: 0000000065
+test07.output: 0000000000
+test08.output: 6565656565

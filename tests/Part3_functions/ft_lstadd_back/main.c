@@ -1,0 +1,183 @@
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
+#include "../../../libft.h"
+
+static void	print_ok(char *msg)
+{
+	write(1, "OK: ", 4);
+	write(1, msg, strlen(msg));
+	write(1, "\n", 1);
+}
+
+static void	print_ko(char *msg)
+{
+	write(1, "KO: ", 4);
+	write(1, msg, strlen(msg));
+	write(1, "\n", 1);
+}
+
+static t_list	*ft_lstnewone(void *content)
+{
+	t_list	*elem;
+
+	elem = (t_list *)malloc(sizeof(t_list));
+	if (!elem)
+		return (NULL);
+	elem->content = content;
+	elem->next = NULL;
+	return (elem);
+}
+
+static int	ptr_eq(void *a, void *b)
+{
+	return (a == b);
+}
+
+int	main(int argc, const char *argv[])
+{
+	t_list	*begin;
+	t_list	*tmp;
+	t_list	*elem;
+	t_list	*elem2;
+	t_list	*elem3;
+	t_list	*elem4;
+	t_list	*elem5;
+	char	*str = strdup("lorem");
+	char	*str2 = strdup("ipsum");
+	char	*str3 = strdup("dolor");
+	char	*str4 = strdup("sit");
+	char	*str5 = strdup("amet");
+
+	elem = ft_lstnewone(str);
+	elem2 = ft_lstnewone(str2);
+	elem3 = ft_lstnewone(str3);
+	elem4 = ft_lstnewone(str4);
+	elem5 = ft_lstnewone(str5);
+	alarm(5);
+	if (argc == 1)
+		return (0);
+	else if (atoi(argv[1]) == 1)
+	{
+		begin = NULL;
+		ft_lstadd_back(&begin, elem);
+		if (ptr_eq(begin, elem) && begin->next == NULL)
+			print_ok("empty list + one node");
+		else
+			print_ko("empty list + one node");
+	}
+	else if (atoi(argv[1]) == 2)
+	{
+		begin = elem;
+		ft_lstadd_back(&begin, elem2);
+		if (ptr_eq(begin, elem) && ptr_eq(begin->next, elem2) && elem2->next == NULL)
+			print_ok("one node list");
+		else
+			print_ko("one node list");
+	}
+	else if (atoi(argv[1]) == 3)
+	{
+		begin = elem;
+		elem->next = elem2;
+		elem2->next = elem3;
+		elem3->next = NULL;
+		ft_lstadd_back(&begin, elem4);
+		if (ptr_eq(begin, elem)
+			&& ptr_eq(begin->next, elem2)
+			&& ptr_eq(begin->next->next, elem3)
+			&& ptr_eq(begin->next->next->next, elem4)
+			&& elem4->next == NULL)
+			print_ok("multi node list preserves order");
+		else
+			print_ko("multi node list preserves order");
+	}
+	else if (atoi(argv[1]) == 4)
+	{
+		begin = NULL;
+		ft_lstadd_back(&begin, elem);
+		ft_lstadd_back(&begin, elem2);
+		ft_lstadd_back(&begin, elem3);
+		ft_lstadd_back(&begin, elem4);
+		if (ptr_eq(begin, elem)
+			&& ptr_eq(begin->next, elem2)
+			&& ptr_eq(begin->next->next, elem3)
+			&& ptr_eq(begin->next->next->next, elem4)
+			&& elem4->next == NULL)
+			print_ok("several pushes to back");
+		else
+			print_ko("several pushes to back");
+	}
+	else if (atoi(argv[1]) == 5)
+	{
+		begin = elem;
+		tmp = begin;
+		ft_lstadd_back(&begin, elem2);
+		if (ptr_eq(begin, tmp) && ptr_eq(elem->next, elem2))
+			print_ok("head unchanged after append");
+		else
+			print_ko("head unchanged after append");
+	}
+	else if (atoi(argv[1]) == 6)
+	{
+		begin = NULL;
+		ft_lstadd_back(NULL, elem);
+		print_ok("lst == NULL did not crash");
+	}
+	else if (atoi(argv[1]) == 7)
+	{
+		begin = NULL;
+		ft_lstadd_back(&begin, NULL);
+		if (begin == NULL)
+			print_ok("new == NULL handled safely");
+		else
+			print_ko("new == NULL handled safely");
+	}
+	else if (atoi(argv[1]) == 8)
+	{
+		begin = elem;
+		elem->next = elem2;
+		ft_lstadd_back(&begin, NULL);
+		if (ptr_eq(begin, elem) && ptr_eq(elem->next, elem2) && elem2->next == NULL)
+			print_ok("new == NULL does not alter existing list");
+		else
+			print_ko("new == NULL does not alter existing list");
+	}
+	else if (atoi(argv[1]) == 9)
+	{
+		begin = elem;
+		elem->next = elem2;
+		elem2->next = NULL;
+		elem4->next = elem5;
+		ft_lstadd_back(&begin, elem4);
+		if (ptr_eq(begin, elem)
+			&& ptr_eq(elem->next, elem2)
+			&& ptr_eq(elem2->next, elem4)
+			&& ptr_eq(elem4->next, elem5))
+			print_ok("appends whole chain when new has next");
+		else
+			print_ko("appends whole chain when new has next");
+	}
+	else if (atoi(argv[1]) == 10)
+	{
+		begin = elem;
+		elem4->content = NULL;
+		ft_lstadd_back(&begin, elem4);
+		if (ptr_eq(begin->next, elem4) && begin->next->content == NULL)
+			print_ok("node with NULL content");
+		else
+			print_ko("node with NULL content");
+	}
+	else if (atoi(argv[1]) == 11)
+	{
+		begin = elem;
+		elem->next = elem2;
+		elem2->next = elem3;
+		ft_lstadd_back(&begin, elem4);
+		if (ptr_eq(elem3->next, elem4) && elem4->next == NULL)
+			print_ok("old tail now points to new");
+		else
+			print_ko("old tail now points to new");
+	}
+	return (0);
+}

@@ -1,0 +1,1 @@
+SKIP: NULL src is undefined behavior for strcpy
