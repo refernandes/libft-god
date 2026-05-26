@@ -24,7 +24,8 @@ do
 		"-c")				OPT_NO_COLOR=1 ;;
 		"-f")				OPT_NO_FORBIDDEN=1 ;;
 		"-n")				OPT_NO_NORMINETTE=1 ;;
-		"-u")				OPT_NO_UPDATE=1 ;;
+		"-u")                           OPT_NO_UPDATE=1 ;;
+		"-fast")                        OPT_FAST=1 ;;
 		"-op1")                         OPT_NO_PART2=1
 		                                        OPT_NO_PART3=1
 		                                        CHECK_IN_PART1=0
