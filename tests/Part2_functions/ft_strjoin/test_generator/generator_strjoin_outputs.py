@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path("output/strjoin_expected")
+OUTDIR = Path("tests/Part2_functions/ft_strjoin")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def out_bytes(s1: str, s2: str) -> bytes:

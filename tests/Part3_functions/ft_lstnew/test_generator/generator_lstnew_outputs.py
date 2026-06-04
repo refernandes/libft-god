@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-OUTDIR = Path('output/lstnew_expected')
+OUTDIR = Path('tests/Part3_functions/ft_lstnew')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUTS = {

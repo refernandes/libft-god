@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/substr_expected')
+OUTDIR = Path('tests/Part2_functions/ft_substr')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

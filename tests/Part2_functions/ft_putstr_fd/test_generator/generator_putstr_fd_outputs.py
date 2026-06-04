@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-OUTDIR = Path('output/putstr_fd_expected')
+OUTDIR = Path('tests/Part2_functions/ft_putstr_fd')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

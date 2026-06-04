@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/strnstr_expected')
+OUTDIR = Path('tests/Part1_functions/ft_strnstr')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def py_strnstr(big, little, len_limit):

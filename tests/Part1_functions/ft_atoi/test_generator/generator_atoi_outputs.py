@@ -1,7 +1,7 @@
 from pathlib import Path
 import ctypes
 
-OUTDIR = Path('output/atoi_expected')
+OUTDIR = Path('tests/Part1_functions/ft_atoi')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

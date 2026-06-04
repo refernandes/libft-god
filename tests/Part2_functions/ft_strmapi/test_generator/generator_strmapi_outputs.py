@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-OUTDIR = Path('output/strmapi_expected')
+OUTDIR = Path('tests/Part2_functions/ft_strmapi')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

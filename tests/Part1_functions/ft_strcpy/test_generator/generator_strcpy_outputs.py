@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-OUTDIR = Path('output/strcpy_expected')
+OUTDIR = Path('tests/Part1_functions/ft_strcpy')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUTS = {

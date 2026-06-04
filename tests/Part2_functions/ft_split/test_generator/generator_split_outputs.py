@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-OUTDIR = Path('output/split_expected')
+OUTDIR = Path('tests/Part2_functions/ft_split')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

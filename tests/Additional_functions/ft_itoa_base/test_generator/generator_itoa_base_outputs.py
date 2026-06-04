@@ -1,7 +1,7 @@
-import Path
+
 from pathlib import Path
 
-OUTDIR = Path('output/itoa_base_expected')
+OUTDIR = Path('tests/Additional_functions/ft_itoa_base')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def itoa_base(n, base):

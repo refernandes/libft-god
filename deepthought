@@ -1,0 +1,3176 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+Renans-Air
+Darwin 25.5.0 arm64
+$> date
+Wed Jun  3 21:31:53 -03 2026
+$> cc --version
+Apple clang version 21.0.0 (clang-2100.0.123.102)
+Target: arm64-apple-darwin25.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+$> make all
+cc -Wall -Wextra -Werror   -c -o ft_isalpha.o ft_isalpha.c
+cc -Wall -Wextra -Werror   -c -o ft_isdigit.o ft_isdigit.c
+cc -Wall -Wextra -Werror   -c -o ft_isalnum.o ft_isalnum.c
+cc -Wall -Wextra -Werror   -c -o ft_isascii.o ft_isascii.c
+cc -Wall -Wextra -Werror   -c -o ft_isprint.o ft_isprint.c
+cc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c
+cc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c
+cc -Wall -Wextra -Werror   -c -o ft_bzero.o ft_bzero.c
+cc -Wall -Wextra -Werror   -c -o ft_memcpy.o ft_memcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_memmove.o ft_memmove.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcat.o ft_strlcat.c
+cc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c
+cc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c
+cc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strrchr.o ft_strrchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strncmp.o ft_strncmp.c
+cc -Wall -Wextra -Werror   -c -o ft_memchr.o ft_memchr.c
+cc -Wall -Wextra -Werror   -c -o ft_memcmp.o ft_memcmp.c
+cc -Wall -Wextra -Werror   -c -o ft_strnstr.o ft_strnstr.c
+cc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c
+cc -Wall -Wextra -Werror   -c -o ft_calloc.o ft_calloc.c
+cc -Wall -Wextra -Werror   -c -o ft_strdup.o ft_strdup.c
+cc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c
+cc -Wall -Wextra -Werror   -c -o ft_strjoin.o ft_strjoin.c
+cc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c
+cc -Wall -Wextra -Werror   -c -o ft_split.o ft_split.c
+cc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c
+cc -Wall -Wextra -Werror   -c -o ft_strmapi.o ft_strmapi.c
+cc -Wall -Wextra -Werror   -c -o ft_striteri.o ft_striteri.c
+cc -Wall -Wextra -Werror   -c -o ft_putchar_fd.o ft_putchar_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putstr_fd.o ft_putstr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putendl_fd.o ft_putendl_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_lstnew.o ft_lstnew.c
+cc -Wall -Wextra -Werror   -c -o ft_lstadd_front.o ft_lstadd_front.c
+cc -Wall -Wextra -Werror   -c -o ft_lstsize.o ft_lstsize.c
+cc -Wall -Wextra -Werror   -c -o ft_lstlast.o ft_lstlast.c
+cc -Wall -Wextra -Werror   -c -o ft_lstadd_back.o ft_lstadd_back.c
+cc -Wall -Wextra -Werror   -c -o ft_lstdelone.o ft_lstdelone.c
+cc -Wall -Wextra -Werror   -c -o ft_lstclear.o ft_lstclear.c
+cc -Wall -Wextra -Werror   -c -o ft_lstiter.o ft_lstiter.c
+cc -Wall -Wextra -Werror   -c -o ft_lstmap.o ft_lstmap.c
+ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+
+$> make all
+make: Nothing to be done for `all'.
+
+$> make all
+make: Nothing to be done for `all'.
+
+$> make all
+make: Nothing to be done for `all'.
+make: Nothing to be done for `all'.
+
+= Part1_functions ==============================================================
+
+= ft_isalpha.c =================================================================
+$> norminette ft_isalpha.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_isalpha.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_isdigit.c =================================================================
+$> norminette ft_isdigit.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_isdigit.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_isalnum.c =================================================================
+$> norminette ft_isalnum.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_isalnum.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_isascii.c =================================================================
+$> norminette ft_isascii.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_isascii.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_isprint.c =================================================================
+$> norminette ft_isprint.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_isprint.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strlen.c ==================================================================
+$> norminette ft_strlen.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strlen.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_memset.c ==================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_memset.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_bzero.c ===================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_bzero.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_memcpy.c ==================================================================
+$> norminette ft_memcpy.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_memcpy.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_memmove.c =================================================================
+$> norminette ft_memmove.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_memmove.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strlcpy.c =================================================================
+$> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strlcpy.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strlcat.c =================================================================
+$> norminette ft_strlcat.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strlcat.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 18 ============================================================
+$> ./user_exe 18
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 19 ============================================================
+$> ./user_exe 19
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 20 ============================================================
+$> ./user_exe 20
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 21 ============================================================
+$> ./user_exe 21
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 22 ============================================================
+$> ./user_exe 22
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 23 ============================================================
+$> ./user_exe 23
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 24 ============================================================
+$> ./user_exe 24
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 25 ============================================================
+$> ./user_exe 25
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_toupper.c =================================================================
+$> norminette ft_toupper.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_toupper.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_tolower.c =================================================================
+$> norminette ft_tolower.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_tolower.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strchr.c ==================================================================
+$> norminette ft_strchr.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strchr.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strrchr.c =================================================================
+$> norminette ft_strrchr.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strrchr.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strncmp.c =================================================================
+$> norminette ft_strncmp.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strncmp.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 18 ============================================================
+$> ./user_exe 18
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 19 ============================================================
+$> ./user_exe 19
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 20 ============================================================
+$> ./user_exe 20
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 21 ============================================================
+$> ./user_exe 21
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 22 ============================================================
+$> ./user_exe 22
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_memchr.c ==================================================================
+$> norminette ft_memchr.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_memchr.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_memcmp.c ==================================================================
+$> norminette ft_memcmp.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_memcmp.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 18 ============================================================
+$> ./user_exe 18
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 19 ============================================================
+$> ./user_exe 19
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 20 ============================================================
+$> ./user_exe 20
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 21 ============================================================
+$> ./user_exe 21
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 22 ============================================================
+$> ./user_exe 22
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 23 ============================================================
+$> ./user_exe 23
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 24 ============================================================
+$> ./user_exe 24
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 25 ============================================================
+$> ./user_exe 25
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strnstr.c =================================================================
+$> norminette ft_strnstr.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strnstr.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_atoi.c ====================================================================
+$> norminette ft_atoi.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_atoi.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 18 ============================================================
+$> ./user_exe 18
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 19 ============================================================
+$> ./user_exe 19
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 20 ============================================================
+$> ./user_exe 20
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 21 ============================================================
+$> ./user_exe 21
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 22 ============================================================
+$> ./user_exe 22
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 23 ============================================================
+$> ./user_exe 23
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 24 ============================================================
+$> ./user_exe 24
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 25 ============================================================
+$> ./user_exe 25
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 26 ============================================================
+$> ./user_exe 26
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 27 ============================================================
+$> ./user_exe 27
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 28 ============================================================
+$> ./user_exe 28
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 29 ============================================================
+$> ./user_exe 29
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 30 ============================================================
+$> ./user_exe 30
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 31 ============================================================
+$> ./user_exe 31
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 32 ============================================================
+$> ./user_exe 32
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 33 ============================================================
+$> ./user_exe 33
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 34 ============================================================
+$> ./user_exe 34
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 35 ============================================================
+$> ./user_exe 35
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 36 ============================================================
+$> ./user_exe 36
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 37 ============================================================
+$> ./user_exe 37
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 38 ============================================================
+$> ./user_exe 38
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 39 ============================================================
+$> ./user_exe 39
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 40 ============================================================
+$> ./user_exe 40
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 41 ============================================================
+$> ./user_exe 41
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 42 ============================================================
+$> ./user_exe 42
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 43 ============================================================
+$> ./user_exe 43
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 44 ============================================================
+$> ./user_exe 44
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_calloc.c ==================================================================
+$> norminette ft_calloc.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_calloc.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+--- /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part1_functions/ft_calloc/user_output_test08	2026-06-03 21:32:08
++++ /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part1_functions/ft_calloc/test08.output	2026-06-03 21:28:48
+@@ -1 +1 @@
+-OK
+\ No newline at end of file
++NULL
+\ No newline at end of file
+Diff KO ❌
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+--- /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part1_functions/ft_calloc/user_output_test10	2026-06-03 21:32:08
++++ /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part1_functions/ft_calloc/test10.output	2026-06-03 21:28:48
+@@ -1 +1 @@
+-KO
+\ No newline at end of file
++NULL
+\ No newline at end of file
+Diff KO ❌
+
+= ft_strdup.c ==================================================================
+$> norminette ft_strdup.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strdup.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Part2_functions ==============================================================
+
+= ft_substr.c ==================================================================
+$> norminette ft_substr.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_substr.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strjoin.c =================================================================
+$> norminette ft_strjoin.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strjoin.c main.c libft.a -o user_exe
+/Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part2_functions/ft_strjoin/main.c:141:24: error: call to undeclared library function 'strcmp' with type 'int (const char *, const char *)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  141 |         if (strjoin && strcmp(strjoin, "abc") == 0)
+      |                        ^
+/Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part2_functions/ft_strjoin/main.c:141:24: note: include the header <string.h> or explicitly provide a declaration for 'strcmp'
+1 error generated.
+
+= ft_strtrim.c =================================================================
+$> norminette ft_strtrim.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strtrim.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_split.c ===================================================================
+$> norminette ft_split.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_split.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_itoa.c ====================================================================
+$> norminette ft_itoa.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_itoa.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_strmapi.c =================================================================
+$> norminette ft_strmapi.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_strmapi.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_striteri.c ================================================================
+$> norminette ft_striteri.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_striteri.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_putchar_fd.c ==============================================================
+$> norminette ft_putchar_fd.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_putchar_fd.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_putstr_fd.c ===============================================================
+$> norminette ft_putstr_fd.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_putstr_fd.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_putendl_fd.c ==============================================================
+$> norminette ft_putendl_fd.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_putendl_fd.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_putnbr_fd.c ===============================================================
+$> norminette ft_putnbr_fd.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_putnbr_fd.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+--- /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part2_functions/ft_putnbr_fd/user_output_test04	2026-06-03 21:32:15
++++ /Users/refernan/projects/old_git/projects/testers/milestone_1/libft/libft-god/tests/Part2_functions/ft_putnbr_fd/test04.output	2026-06-03 21:28:47
+@@ -1 +1 @@
+-21
+\ No newline at end of file
++42
+\ No newline at end of file
+Diff KO ❌
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 13 ============================================================
+$> ./user_exe 13
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 14 ============================================================
+$> ./user_exe 14
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 15 ============================================================
+$> ./user_exe 15
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 16 ============================================================
+$> ./user_exe 16
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 17 ============================================================
+$> ./user_exe 17
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Part3_functions ==============================================================
+
+= ft_lstnew.c ==================================================================
+$> norminette ft_lstnew.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstnew.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 12 ============================================================
+$> ./user_exe 12
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstadd_front.c ============================================================
+$> norminette ft_lstadd_front.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstadd_front.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstsize.c =================================================================
+$> norminette ft_lstsize.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstsize.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstlast.c =================================================================
+$> norminette ft_lstlast.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstlast.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstadd_back.c =============================================================
+$> norminette ft_lstadd_back.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstadd_back.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstdelone.c ===============================================================
+$> norminette ft_lstdelone.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstdelone.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstclear.c ================================================================
+$> norminette ft_lstclear.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstclear.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstiter.c =================================================================
+$> norminette ft_lstiter.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstiter.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= ft_lstmap.c ==================================================================
+$> norminette ft_lstmap.c | grep -E '(Error|Warning)'
+$> cc -Wextra -Wall -Werror -g3 ft_lstmap.c main.c libft.a -o user_exe
+
+= Test 1 ============================================================
+$> ./user_exe 1
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 2 ============================================================
+$> ./user_exe 2
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 3 ============================================================
+$> ./user_exe 3
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 4 ============================================================
+$> ./user_exe 4
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 5 ============================================================
+$> ./user_exe 5
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 6 ============================================================
+$> ./user_exe 6
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 7 ============================================================
+$> ./user_exe 7
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 8 ============================================================
+$> ./user_exe 8
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 9 ============================================================
+$> ./user_exe 9
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 10 ============================================================
+$> ./user_exe 10
+$> diff -U 3 user_output test.output
+Diff OK ✅
+
+= Test 11 ============================================================
+$> ./user_exe 11
+$> diff -U 3 user_output test.output
+Diff OK ✅

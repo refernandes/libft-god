@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path("output/strncmp_expected")
+OUTDIR = Path("tests/Part1_functions/ft_strncmp")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def c_strncmp(s1: bytes, s2: bytes, n: int) -> int:

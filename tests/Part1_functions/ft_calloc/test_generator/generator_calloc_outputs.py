@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/calloc_expected')
+OUTDIR = Path('tests/Part1_functions/ft_calloc')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

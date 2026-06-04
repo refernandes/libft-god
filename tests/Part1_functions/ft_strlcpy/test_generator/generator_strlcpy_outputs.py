@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/strlcpy_expected')
+OUTDIR = Path('tests/Part1_functions/ft_strlcpy')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def py_strlcpy(dest, src, size):

@@ -3,7 +3,7 @@
 
 from pathlib import Path
 
-OUTDIR = Path("output")
+OUTDIR = Path("tests/Part1_functions/ft_memcpy")
 OUTDIR.mkdir(exist_ok=True)
 
 BASE = bytearray(b'j' * 30)

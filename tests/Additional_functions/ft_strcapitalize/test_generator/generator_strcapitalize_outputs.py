@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/strcapitalize_expected')
+OUTDIR = Path('tests/Additional_functions/ft_strcapitalize')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def py_strcapitalize(s):

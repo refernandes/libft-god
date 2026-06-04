@@ -1,7 +1,7 @@
 from pathlib import Path
 
 def generate_outputs(name, base_tests, extra_tests):
-    OUTDIR = Path(f'output/{name}_expected')
+    OUTDIR = Path(f'tests/Additional_functions/ft_{name}')
     OUTDIR.mkdir(parents=True, exist_ok=True)
     
     for i, res in enumerate(base_tests + extra_tests, 1):

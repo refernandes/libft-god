@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/memchr_expected')
+OUTDIR = Path('tests/Part1_functions/ft_memchr')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -13,7 +13,7 @@ def memchr(buf: bytes, c: int, n: int):
     return None
 
 
-def c_string_from(buf: bytes, idx: int | None):
+def c_string_from(buf: bytes, idx):
     if idx is None:
         return b'NULL'
     end = idx

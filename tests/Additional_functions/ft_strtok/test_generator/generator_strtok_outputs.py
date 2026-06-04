@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTDIR = Path('output/strtok_expected')
+OUTDIR = Path('tests/Additional_functions/ft_strtok')
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 def run_case(arg):
