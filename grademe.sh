@@ -94,6 +94,29 @@ done
 
 source "${PATH_TEST}"/srcs/colors.sh
 source "${PATH_TEST}"/srcs/check_cheat.sh
+
+# Automatic Update Check
+if [ ${OPT_NO_UPDATE} -eq 0 ]
+then
+	printf "${COLOR_INFO}Checking for updates...${DEFAULT}\n"
+	git -C "${PATH_TEST}" fetch origin main > /dev/null 2>&1
+	LOCAL=$(git -C "${PATH_TEST}" rev-parse HEAD)
+	REMOTE=$(git -C "${PATH_TEST}" rev-parse origin/main 2>/dev/null)
+
+	if [ "$LOCAL" != "$REMOTE" ] && [ ! -z "$REMOTE" ]; then
+		printf "${COLOR_WARNING}A new version of Libft-God is available!${DEFAULT}\n"
+		printf "Do you want to update now? [y/N] "
+		read -n 1 -r
+		printf "\n"
+		if [[ $REPLY =~ ^[Yy]$ ]]; then
+			printf "${COLOR_INFO}Updating...${DEFAULT}\n"
+			git -C "${PATH_TEST}" pull origin main > /dev/null 2>&1
+		else
+			printf "${COLOR_INFO}Skipping update.${DEFAULT}\n"
+		fi
+	fi
+fi
+
 source "${PATH_TEST}"/srcs/check_compilation.sh
 source "${PATH_TEST}"/srcs/check_file.sh
 source "${PATH_TEST}"/srcs/check_norme.sh
