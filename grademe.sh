@@ -127,6 +127,19 @@ fi
 
 source "${PATH_TEST}"/my_config.sh
 
+# Path Hierarchy Logic
+PARENT_PATH="$(dirname "${PATH_TEST}")"
+if [ -f "${PARENT_PATH}/Makefile" ] || [ -f "${PARENT_PATH}/libft.h" ]
+then
+	# Superior folder identified as libft (Priority 1)
+	PATH_LIBFT="${PARENT_PATH}"
+elif [ -z "${PATH_LIBFT}" ]
+then
+	# No superior folder found and no user path set
+	printf "${RED}Error: PATH_LIBFT is not set in my_config.sh and no libft found in parent directory.${DEFAULT}\n"
+	exit
+fi
+
 if [ ${CUSTOM_DIRECTORY} -eq 1 ]
 then
 	if [ -d "${PATH_TEST}"/dirlibft ]
